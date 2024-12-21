@@ -1,2 +1,8 @@
 #ignorar o banco de dados em si.
 .banco.db
+
+#ignorar o token por razoes de segurança.
+.token
+
+#ignorar o proprio gitignore
+.gitignore

@@ -1,13 +1,16 @@
 #include "../libs/sqlite/sqlite3.h"
 #include "configs.hpp"
 #include <iostream>
+#include <ctime>
 
 int testes_de_inicio() {
   sqlite3 * db;
   int result_command;
+  time_t time_stamp;
+  time(&time_stamp);
   //INICIALIZAÇÃO TESTE FAVOR LEMBRAR DE FECHAR ISSO!
   //Uso de endl e seu impacto na performance neste use_Case considerado irrelevante.
-  std::cout << "Iniciando teste de acesso ao DB" << std::endl;
+  std::cout << "[" << ctime(&time_stamp) << "] Iniciando teste de acesso ao DB" << std::endl;
   //Testes...
   result_command = sqlite3_open(SQLITE_FILE, &db);
   if (result_command) {
